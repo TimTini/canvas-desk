@@ -13,8 +13,9 @@
 <div class="dialog-heading"><h2 id="input-title">Danh sách tên và lớp</h2><button id="close-dialog" type="button" class="secondary" aria-label="Đóng">Đóng</button></div>
 <form id="form">
 <label for="students">Danh sách tên và lớp</label>
-<p id="hint">Dán hai cột từ Excel, hoặc nhập mỗi dòng: Họ và tên;Lớp.</p>
-<textarea id="students" rows="10" wrap="off" autofocus required aria-describedby="hint row-hint" placeholder="Nguyễn Văn An;6A1&#10;Trần Thị Bình;7A2" spellcheck="false"></textarea>
+<p id="hint">Dán hai cột Tên và Lớp từ Excel, hoặc dùng nút Chèn tab giữa tên và lớp khi nhập tay. Mỗi học sinh một dòng.</p>
+<textarea id="students" rows="10" wrap="off" autofocus required aria-describedby="hint row-hint input-error" placeholder="Nguyễn Văn An&#9;6A1&#10;Trần Thị Bình&#9;7A2" spellcheck="false"></textarea>
+<button id="insert-tab" type="button" class="secondary">Chèn tab</button>
 <p id="row-hint" role="status"></p>
 <p id="input-error" role="alert"></p>
 <div class="actions"><button id="generate" type="submit">Tạo file PSD</button></div>
@@ -22,9 +23,10 @@
 </dialog>
 <div class="actions"><button id="cancel" type="button" class="secondary" hidden>Hủy</button><span id="count"></span></div>
 <p id="status" role="status" aria-live="polite">Danh sách được xử lý trên máy bạn.</p>
+<button id="import-list" class="secondary" type="button" hidden>Nạp danh sách từ PSD</button>
 <progress id="progress" hidden></progress>
 <a id="download" class="download" hidden>Tải file phù hiệu NTT</a>
-<section id="preview" hidden><h2 id="preview-title">Mẫu PSD NTT</h2><div class="viewer-tools"><button id="fit" type="button" class="secondary">Vừa chiều rộng</button><button id="zoom-out" type="button" class="secondary" aria-label="Thu nhỏ">−</button><button id="zoom-in" type="button" class="secondary" aria-label="Phóng to">+</button><button id="actual-size" type="button" class="secondary">100%</button><span id="document-size"></span></div><div id="image" tabindex="0" aria-label="Khung xem PSD, kéo để di chuyển và cuộn chuột để phóng to thu nhỏ"></div></section>
+<section id="preview" hidden><h2 id="preview-title">Mẫu PSD NTT</h2><div class="viewer-tools"><button id="fit" type="button" class="secondary">Vừa chiều rộng</button><button id="fit-content" type="button" class="secondary" hidden>Vừa ngang phù hiệu</button><button id="zoom-out" type="button" class="secondary" aria-label="Thu nhỏ">−</button><button id="zoom-in" type="button" class="secondary" aria-label="Phóng to">+</button><button id="actual-size" type="button" class="secondary">100%</button><span id="document-size"></span></div><div id="image" tabindex="0" aria-label="Khung xem PSD, kéo để di chuyển và cuộn chuột để phóng to thu nhỏ"></div></section>
 <p class="viewer-hint">Kéo chuột trái hoặc chuột giữa để di chuyển · Cuộn để zoom tại con trỏ · Space + kéo như công cụ bàn tay</p>
 <footer>819 × 313 px · 300 DPI · Chữ chỉnh sửa được trong Photoshop</footer>
 </main>
